@@ -1,5 +1,4 @@
 var email = document.querySelector('#email');
-
 email.oninput = function(){
     x = this.value;
     var dog = '@';
