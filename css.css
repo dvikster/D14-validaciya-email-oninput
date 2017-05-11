@@ -1,0 +1,9 @@
+input{
+    outline: none;
+}
+input.good{
+    border: 1px solid green;
+}
+input.error{
+    border: 1px solid red;
+}
