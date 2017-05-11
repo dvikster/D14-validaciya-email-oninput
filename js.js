@@ -7,6 +7,7 @@ email.oninput = function(){
     var foundPosDog = x.indexOf('@');
 	if(condDog  && (condDog.length == 1) && (condDogIndex !== dog) && (foundPosDog !== x.length-1) ){
         email.className = 'good';
+
         var errors_symbol =[' ','"',')','(', '/','\\','|',':',';','#','?',',',];
         for (var i=0; i<errors_symbol.length; i++){
             if (x.indexOf(errors_symbol[i])!=-1) {
@@ -20,10 +21,11 @@ email.oninput = function(){
         //         email.className = 'error';
         //     }
         // }
-
+        return true;
 	}
     else {
         email.className = 'error';
+        return false;
     }
 }
 
@@ -32,7 +34,7 @@ var telNumber='';
 var newtel='';
 
 tel.onkeyup=function() {
-    telNumber = this.value.split('');
+    telNumber = this.value.split('',9);
 	if (telNumber.length == 3){
 		telNumber.splice(3, 0, '-');
 	}
